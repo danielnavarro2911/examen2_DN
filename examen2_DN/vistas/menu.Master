@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="menu.master.cs" Inherits="examen2_DN.vistas.menu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../css/menucss.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            align-items: center;
+        }
+        #main {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            padding: 20px; 
+        }
+    </style>
+</head>
+<body>
+<form id="form1" runat="server">
+<body>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+<li><a href="inicio.aspx">Inicio</a></li>
+<li><a href="partidos.aspx">Registrar</a></li>
+<li><a href="votos.aspx">Votar</a></li>
+<li><a href="resultados.aspx">Resultados</a></li>
+
+</ul>
+</div>
+ <main id="main" class="flexbox-col">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+
+</div>
+</body>
+</form>
+</body>
+</html>
